@@ -1,4 +1,4 @@
 # Instagram Message Formatter
 
-Formats Instagram message data downloaded from the Instagram data download request.
-Parses through the JSON file and writes to an HTML file.
+This program formats Instagram message data downloaded from the Instagram data download request.
+It parses through the downloaded JSON file and writes to an HTML file, which is styled by the CSS file.
