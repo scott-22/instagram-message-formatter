@@ -4,9 +4,9 @@ from json import load
 from io import *
 from EMOJI_REPLACE import EMOJI_REPLACE
 
-#USERNAME AND TARGET USERS
-USERNAME = "filler1"
-TARGET = set([USERNAME, "filler2"])
+#USERNAME AND ALL USERS OF TARGET CONVERSATION
+USERNAME = "YOUR_USERNAME"
+TARGET = set([USERNAME, "OTHER_USERNAMES"])
 
 #MONTHS
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
