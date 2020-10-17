@@ -1,4 +1,4 @@
-#Sicheng Hao
+#Sicheng (Scott) Hao
 
 from json import load
 from io import *
