@@ -1,4 +1,7 @@
-EMOJI_REPLACE = {"⌚":"&#x231A;",
+#Converts emojis from unicode to html code points
+
+EMOJI_REPLACE = {
+"⌚":"&#x231A;",
 "⌛":"&#x231B;",
 "⏩":"&#x23E9;",
 "⏪":"&#x23EA;",
