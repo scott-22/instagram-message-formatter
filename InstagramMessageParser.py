@@ -1,5 +1,3 @@
-#Sicheng (Scott) Hao
-
 from json import load
 from io import *
 from EMOJI_REPLACE import EMOJI_REPLACE
@@ -102,18 +100,19 @@ def monthDay(y, m):
     else:
         return MONTH_DAYS[1]
 
-with open("messages.json") as readChats, open("messages.html", 'w') as writeChats:
-    chats = load(readChats)
+if __name__ == "__main__":
+    with open("messages.json") as readChats, open("messages.html", 'w') as writeChats:
+        chats = load(readChats)
 
-    writeChats.write("<!DOCTYPE html>\n<html>\n<head><title>Instagram Chats</title>\n")
-    writeChats.write("<link href=\"messages.css\" type=\"text/css\" rel=\"stylesheet\" /></head>")
-    writeChats.write("<body>\n<div>\n<h1>Messages between " + ", ".join(TARGET) + "</h1>\n")
+        writeChats.write("<!DOCTYPE html>\n<html>\n<head><title>Instagram Chats</title>\n")
+        writeChats.write("<link href=\"messages.css\" type=\"text/css\" rel=\"stylesheet\" /></head>")
+        writeChats.write("<body>\n<div>\n<h1>Messages between " + ", ".join(TARGET) + "</h1>\n")
 
-    last = ""
-    for chat in reversed(chats):
-        if not set(chat["participants"]) == TARGET:
-            continue
-        for message in reversed(chat["conversation"]):
-            last = process(message, writeChats, last)
+        last = ""
+        for chat in reversed(chats):
+            if not set(chat["participants"]) == TARGET:
+                continue
+            for message in reversed(chat["conversation"]):
+                last = process(message, writeChats, last)
 
-    writeChats.write("</div>\n</body>\n</html>\n")
+        writeChats.write("</div>\n</body>\n</html>\n")
